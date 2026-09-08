@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вибрация струн — Лазерная центровка и балансировка промышленных вентиляторов</title>
+  <meta name="description" content="Вибрация струн — прецизионная лазерная центровка валов и динамическая балансировка роторов промышленных вентиляторов. Опыт работы в Московском вентиляторном заводе, SKF и FLSmidth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans+Condensed:ital,wght@0,500;0,600;1,500;1,600&display=optional" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260514" />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23131619' stroke-width='2'/><line x1='16' y1='4' x2='16' y2='28' stroke='%23131619' stroke-width='1'/><line x1='4' y1='16' x2='28' y2='16' stroke='%23131619' stroke-width='1'/><circle cx='16' cy='16' r='3' fill='%231F4E6B'/></svg>" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Вибрация струн — на главную">
+      Вибрация&nbsp;струн
+      <span class="wm-sub">EST. 2022</span>
+    </a>
+    <nav class="nav" aria-label="Главное меню">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="request.html">Заявка</a>
+    </nav>
+    <div class="header-meta" aria-hidden="true">
+      <span class="dot"></span>
+      <span>Москва · выезд по РФ</span>
+    </div>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.body.classList.toggle('nav-open')">Меню</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Инженерная служба · № 001</span>
+          <h1 class="display">
+            <span class="linebreak">Инженерные решения по снижению</span>
+            <span class="linebreak"><em>вибрации</em> промышленных вентиляторов:</span>
+            <span class="linebreak">центровка, балансировка, вибродиагностика.</span>
+          </h1>
+          <div class="hero-actions">
+            <a href="request.html" class="btn">
+              Оставить заявку
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+            <a href="about.html" class="btn ghost">О компании</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside reveal">
+          <!-- Technical fan rotor figure -->
+          <svg class="tech-figure" viewBox="0 0 400 400" role="img" aria-labelledby="rotor-title">
+            <title id="rotor-title">Схема ротора промышленного вентилятора</title>
+            <defs>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#9DA8B2" stroke-width="0.5" opacity="0.4"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="400" fill="url(#grid)" />
+
+            <!-- Crosshairs -->
+            <line x1="0" y1="200" x2="400" y2="200" stroke="#9DA8B2" stroke-dasharray="3 4" stroke-width="0.8"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="#9DA8B2" stroke-dasharray="3 4" stroke-width="0.8"/>
+
+            <!-- Outer housing -->
+            <circle cx="200" cy="200" r="175" fill="none" stroke="#131619" stroke-width="1.2"/>
+            <circle cx="200" cy="200" r="168" fill="none" stroke="#131619" stroke-width="0.5" opacity=".4"/>
+
+            <!-- Tick marks around housing -->
+            <g stroke="#131619" stroke-width="0.8">
+              <g id="tick">
+                <line x1="200" y1="25" x2="200" y2="35" />
+              </g>
+              <use href="#tick" transform="rotate(30 200 200)"/>
+              <use href="#tick" transform="rotate(60 200 200)"/>
+              <use href="#tick" transform="rotate(90 200 200)"/>
+              <use href="#tick" transform="rotate(120 200 200)"/>
+              <use href="#tick" transform="rotate(150 200 200)"/>
+              <use href="#tick" transform="rotate(180 200 200)"/>
+              <use href="#tick" transform="rotate(210 200 200)"/>
+              <use href="#tick" transform="rotate(240 200 200)"/>
+              <use href="#tick" transform="rotate(270 200 200)"/>
+              <use href="#tick" transform="rotate(300 200 200)"/>
+              <use href="#tick" transform="rotate(330 200 200)"/>
+            </g>
+
+            <!-- Minor ticks -->
+            <g stroke="#545961" stroke-width="0.5" opacity=".6">
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(10 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(20 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(40 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(50 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(70 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(80 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(100 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(110 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(130 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(140 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(160 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(170 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(190 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(200 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(220 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(230 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(250 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(260 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(280 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(290 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(310 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(320 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(340 200 200)"/>
+              <line x1="200" y1="28" x2="200" y2="33" transform="rotate(350 200 200)"/>
+            </g>
+
+            <!-- Rotor (spins) -->
+            <g class="rotor-spin">
+              <!-- 8 curved blades -->
+              <g fill="none" stroke="#131619" stroke-width="1.4" stroke-linecap="round">
+                <path d="M 200 200 Q 240 130 280 112" />
+                <path d="M 200 200 Q 270 240 288 280" />
+                <path d="M 200 200 Q 160 270 120 288" />
+                <path d="M 200 200 Q 130 160 112 120" />
+                <path d="M 200 200 Q 260 160 300 160" transform="rotate(22.5 200 200)"/>
+                <path d="M 200 200 Q 240 260 260 300" transform="rotate(22.5 200 200)"/>
+                <path d="M 200 200 Q 140 240 100 260" transform="rotate(22.5 200 200)"/>
+                <path d="M 200 200 Q 160 140 140 100" transform="rotate(22.5 200 200)"/>
+              </g>
+              <!-- inner rotor outline -->
+              <circle cx="200" cy="200" r="125" fill="none" stroke="#131619" stroke-width="0.6" opacity=".4"/>
+              <!-- hub -->
+              <circle cx="200" cy="200" r="34" fill="#E5E4DC" stroke="#131619" stroke-width="1.4"/>
+              <circle cx="200" cy="200" r="28" fill="none" stroke="#131619" stroke-width="0.5" opacity=".5"/>
+              <circle cx="200" cy="200" r="6" fill="#1F4E6B"/>
+              <!-- keyway tick -->
+              <line x1="200" y1="170" x2="200" y2="165" stroke="#1F4E6B" stroke-width="2"/>
+            </g>
+
+            <!-- Labels -->
+            <g font-family="IBM Plex Mono, monospace" font-size="9" fill="#545961" letter-spacing="1">
+              <text x="200" y="18" text-anchor="middle">0°</text>
+              <text x="390" y="203" text-anchor="end">90°</text>
+              <text x="200" y="394" text-anchor="middle">180°</text>
+              <text x="10" y="203">270°</text>
+            </g>
+
+            <!-- Corner metadata -->
+            <g font-family="IBM Plex Mono, monospace" font-size="8" fill="#545961" letter-spacing="0.8">
+              <text x="12" y="18">FIG. 01 · ROTOR Ø1250</text>
+              <text x="388" y="18" text-anchor="end">N 55.75° E 37.62°</text>
+              <text x="12" y="390">REV / 1480 об/мин</text>
+              <text x="388" y="390" text-anchor="end">ISO 21940-11</text>
+            </g>
+          </svg>
+
+          <div class="figure-caption">
+            <span>Фиг. 01</span>
+            <span><b>Ротор центробежного вентилятора</b> — балансировка в двух плоскостях</span>
+            <span>Ø 1250 мм</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDEX BAR -->
+  <div class="index-bar">
+    <div class="shell">
+      <span>Лазерная центровка</span>
+      <span class="sep">·</span>
+      <span>Динамическая балансировка</span>
+      <span class="sep">·</span>
+      <span>Вибродиагностика</span>
+      <span class="sep">·</span>
+      <span>Выезд по РФ · Москва</span>
+    </div>
+  </div>
+
+  <!-- INTRO / ABOUT BLURB -->
+  <section>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§ 01 — О нас</span>
+        <div>
+          <h2>Мастерская <em style="font-style:italic;color:var(--accent);">большой точности.</em></h2>
+          <p class="lead">«Вибрация струн» — инженерное бюро. Мы занимаемся возвращением вентиляторам спокойной работы. Выставляем валы, уравновешиваем роторы, слушаем подшипники.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="service reveal">
+        <span class="num">01 / 03</span>
+        <svg class="svc-icon" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="6" y="22" width="16" height="16" rx="1"/>
+          <rect x="38" y="22" width="16" height="16" rx="1"/>
+          <line x1="22" y1="30" x2="38" y2="30" stroke-dasharray="2 2"/>
+          <circle cx="14" cy="30" r="2" fill="currentColor"/>
+          <circle cx="46" cy="30" r="2" fill="currentColor"/>
+          <line x1="14" y1="16" x2="14" y2="22"/>
+          <line x1="46" y1="16" x2="46" y2="22"/>
+          <circle cx="30" cy="30" r="1.5" fill="#1F4E6B" stroke="#1F4E6B"/>
+        </svg>
+        <h3>Лазерная центровка</h3>
+        <p>Выверка соосности валов двигателя и вентилятора с точностью до сотых миллиметра.</p>
+        <ul class="bullets">
+          <li>Муфтовые соединения</li>
+          <li>Ременные передачи</li>
+          <li>Мягкая лапа · отчёт PDF</li>
+        </ul>
+      </div>
+
+      <div class="service reveal">
+        <span class="num">02 / 03</span>
+        <svg class="svc-icon" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="30" cy="30" r="18"/>
+          <circle cx="30" cy="30" r="3" fill="currentColor"/>
+          <line x1="30" y1="12" x2="30" y2="17"/>
+          <line x1="48" y1="30" x2="43" y2="30"/>
+          <line x1="30" y1="48" x2="30" y2="43"/>
+          <line x1="12" y1="30" x2="17" y2="30"/>
+          <path d="M 30 30 L 42 22" stroke="#1F4E6B" stroke-width="1.6"/>
+          <circle cx="42" cy="22" r="2" fill="#1F4E6B" stroke="#1F4E6B"/>
+        </svg>
+        <h3>Динамическая балансировка</h3>
+        <p>Ротор уравновешивается на месте, в одной или двух плоскостях — без демонтажа.</p>
+        <ul class="bullets">
+          <li>Ротор до 5 т</li>
+          <li>Класс до G 2,5</li>
+          <li>Протокол ISO 21940-11</li>
+        </ul>
+      </div>
+
+      <div class="service reveal">
+        <span class="num">03 / 03</span>
+        <svg class="svc-icon" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.2">
+          <polyline points="6,36 14,36 18,22 24,46 30,28 36,38 42,24 48,36 54,36"/>
+          <line x1="6" y1="50" x2="54" y2="50" stroke-width="0.8"/>
+          <line x1="6" y1="14" x2="6" y2="50" stroke-width="0.8"/>
+          <circle cx="30" cy="28" r="2" fill="#1F4E6B" stroke="#1F4E6B"/>
+        </svg>
+        <h3>Вибродиагностика</h3>
+        <p>Анализ спектра и поиск причины: дисбаланс, расцентровка, износ подшипников, резонанс, ослабления посадок.</p>
+        <ul class="bullets">
+          <li>Спектральный отчёт</li>
+          <li>Рекомендации</li>
+          <li>Выезд в течение 3 дней</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALEXEY / RESUME TEASER -->
+  <section>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§ 02 — Мастер</span>
+        <div>
+          <h2>Главный инженер</h2>
+        </div>
+      </div>
+
+      <div class="credentials">
+        <div class="portrait reveal">
+          <img class="portrait-photo" src="assets/alexey.jpg" alt="Алексей — инженер-наладчик вращающегося оборудования" loading="lazy" decoding="async" width="800" height="800" />
+          <div class="portrait-marks">
+            <span class="corner tl"></span>
+            <span class="corner tr"></span>
+            <span class="corner bl"></span>
+            <span class="corner br"></span>
+          </div>
+          <span class="label">Алексей · Москва</span>
+        </div>
+
+        <div class="cred-body reveal">
+          <h3>Инженер-наладчик вращающегося оборудования</h3>
+          <p>Центровка, балансировка и диагностика машин на цементных заводах, ТЭЦ, в металлургии и пищевой промышленности.</p>
+
+          <ol class="timeline">
+            <li>
+              <span class="yr">1999 — 2007</span>
+              <div>
+                <div class="place">Московский вентиляторный завод</div>
+                <div class="role">Инженер-конструктор, затем наладчик ОТК. Сборка и стендовые испытания вентиляторов общепромышленного назначения.</div>
+              </div>
+            </li>
+            <li>
+              <span class="yr">2007 — 2013</span>
+              <div>
+                <div class="place">SKF — сервисный центр</div>
+                <div class="role">Сертифицированный специалист по центровке и вибродиагностике. Обучение на оборудовании Fixturlaser, Microlog, выездные работы по ЦФО.</div>
+              </div>
+            </li>
+            <li>
+              <span class="yr">2013 — 2022</span>
+              <div>
+                <div class="place">FLSmidth</div>
+                <div class="role">Старший инженер по шеф-монтажу. Дымососы, тягодутьевые машины и вентиляторы цементных линий — Россия, Казахстан, Узбекистан.</div>
+              </div>
+            </li>
+            <li>
+              <span class="yr">с 2022</span>
+              <div>
+                <div class="place">«Вибрация струн» — частная практика</div>
+                <div class="role">Самостоятельный выезд к заказчику. Центровка, балансировка, спектральный анализ.</div>
+              </div>
+            </li>
+          </ol>
+
+          <div style="margin-top:1.75rem;">
+            <a href="about.html" class="btn ghost">Подробнее о мастере <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="shell">
+      <div>
+        <span class="eyebrow" style="color: color-mix(in oklab, var(--paper) 70%, transparent);">Заявка</span>
+        <h2>Принимаем заявки на центровку, балансировку и вибродиагностику.</h2>
+        <p>Опишите задачу в форме — ответим в течение рабочего дня. Бесплатная консультация по телефону или в мессенджере.</p>
+      </div>
+      <div class="cta-banner-right">
+        <a href="request.html" class="btn">Оставить заявку <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="wordmark">Вибрация&nbsp;струн<span class="wm-sub">EST. 2022</span></span>
+        <p class="tagline">Технический контроль состояния машин выполняется в соответствии с требованиями ГОСТ ИСО 10816 и ГОСТ ИСО 1940-1.</p>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <p><a href="tel:+79037106818">+7 (926) 779-39-46</a></p>
+        <p><a href="mailto:stringvibration@yandex.ru">stringvibration@yandex.ru</a></p>
+        <p>Telegram · WhatsApp</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <p><a href="index.html">Главная</a></p>
+        <p><a href="about.html">О компании</a></p>
+        <p><a href="request.html">Заявка</a></p>
+        <p><a href="privacy.html">Политика конфиденциальности</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2022 — 2026 · «Вибрация струн»</span>
+      <span>ИНН 773439210684 · Москва</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // subtle mobile nav close on link click
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', () => document.body.classList.remove('nav-open'));
+  });
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<script>
+  // ---- Cookie consent banner -----------------------------------------
+  // Shows once per browser session (sessionStorage). When the user closes
+  // the tab/window, sessionStorage clears and on next visit the banner
+  // reappears — exactly the "per-session" semantics the user asked for.
+  (() => {
+    const KEY = 'cookie_consent';
+    if (sessionStorage.getItem(KEY) === '1') return;
+
+    const banner = document.createElement('aside');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-live', 'polite');
+    banner.setAttribute('aria-label', 'Использование файлов cookies');
+    banner.innerHTML = `
+      <div class="cookie-banner-inner">
+        <div class="cookie-banner-copy">
+          <span class="cookie-banner-eyebrow">Уведомление</span>
+          <p>Сайт использует только технически необходимые файлы cookies — для работы формы заявки и базовых настроек интерфейса. Аналитических и маркетинговых трекеров нет.</p>
+        </div>
+        <div class="cookie-banner-actions">
+          <a class="cookie-banner-more" href="privacy.html#cookies">Подробнее</a>
+          <button class="cookie-banner-accept" type="button">Принять</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    // Two RAFs so the browser registers the initial transform before
+    // we flip data-open — otherwise the entrance transition is skipped.
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      banner.dataset.open = 'true';
+    }));
+
+    banner.querySelector('.cookie-banner-accept').addEventListener('click', () => {
+      sessionStorage.setItem(KEY, '1');
+      delete banner.dataset.open;
+      banner.addEventListener('transitionend', () => banner.remove(), { once: true });
+    });
+  })();
+</script>
+</body>
+</html>

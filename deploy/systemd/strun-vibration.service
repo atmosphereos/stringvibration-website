@@ -1,0 +1,44 @@
+[Unit]
+Description=Вибрация струн — intake server (Node + Express)
+Documentation=https://xn--80aab2cfecffaqcs7c.xn--p1ai
+After=network-online.target mysql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=vibratsiya
+Group=vibratsiya
+WorkingDirectory=/var/www/strun-vibration
+ExecStart=/usr/bin/node server/index.js
+EnvironmentFile=/var/www/strun-vibration/.env
+Environment=NODE_ENV=production
+Environment=PORT=3000
+
+# crash recovery
+Restart=on-failure
+RestartSec=5
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+# logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=strun-vibration
+
+# hardening — drop privileges and lock down filesystem access
+# NOTE: MemoryDenyWriteExecute is intentionally NOT set — V8's JIT needs to
+# allocate W^X pages and the directive triggers SIGTRAP / core dump on Node.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/strun-vibration
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictNamespaces=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
