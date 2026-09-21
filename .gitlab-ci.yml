@@ -1,0 +1,22 @@
+stages:
+  - test
+
+run_nginx_tests:
+  stage: test
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  variables:
+    TEST_HTTP_URL: "http://docker:8080"
+    TEST_HTTPS_URL: "https://docker:8443"
+  before_script:
+    - mkdir -p certs
+    - apk add --no-cache openssl
+    - openssl req -x509 -nodes -days 1 -newkey rsa:2048 -keyout certs/privkey.pem -out certs/fullchain.pem -subj "/CN=localhost"
+    - docker-compose -f docker-compose.test.yml up -d --build
+    - sleep 5
+  script:
+    - docker-compose -f docker-compose.test.yml exec -T backend npm install
+    - docker-compose -f docker-compose.test.yml exec -T backend npm run test
+  after_script:
+    - docker-compose -f docker-compose.test.yml down
