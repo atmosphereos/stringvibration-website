@@ -1,5 +1,7 @@
 stages:
   - test
+  - build
+  - deploy
 
 run_nginx_tests:
   stage: test
@@ -20,3 +22,28 @@ run_nginx_tests:
     - docker-compose -f docker-compose.test.yml exec -T backend npm run test
   after_script:
     - docker-compose -f docker-compose.test.yml down
+
+build_app:
+  stage: build
+
+production_deploy:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache openssh-client
+    - eval $(ssh-agent -s)
+    - echo '$SSH-PRIVATE-KEY' | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $SERVER-HOST >> ~/.ssh/known_hosts
+  script:
+    - ssh $SERVER_USER@$SERVER_HOST "
+      cd /var/www/strun-vibration &&
+      git pull origin main &&
+      npm install --production &&
+      sudo systemctl restart strun-vibration.service
+      nginx -s reload
+      "
+  only:
+   - main
+  when: manual
