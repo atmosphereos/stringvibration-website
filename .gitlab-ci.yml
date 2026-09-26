@@ -16,7 +16,7 @@ run_nginx_tests:
     - apk add --no-cache openssl
     - openssl req -x509 -nodes -days 1 -newkey rsa:2048 -keyout certs/privkey.pem -out certs/fullchain.pem -subj "/CN=localhost"
     - docker-compose -f docker-compose.test.yml up -d --build
-    - sleep 10
+    - sleep 15
   script:
     - docker-compose -f docker-compose.test.yml exec -T backend npm install
     - docker-compose -f docker-compose.test.yml exec -T backend npm run test
