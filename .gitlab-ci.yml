@@ -1,6 +1,5 @@
 stages:
   - test
-  - build
   - deploy
 
 run_nginx_tests:
@@ -11,15 +10,14 @@ run_nginx_tests:
   variables:
     TEST_HTTP_URL: "http://nginx:80"
   before_script:
+    - cp "$DOTENV" .env
     - docker compose -f docker-compose.test.yml up --build -d
     - sleep 20
   script:
     - docker compose -f docker-compose.test.yml exec -T backend npm test
   after_script:
     - docker compose -f docker-compose.test.yml down
-
-build_app:
-  stage: build
+    - rm -f .env
 
 production_deploy:
   stage: deploy
